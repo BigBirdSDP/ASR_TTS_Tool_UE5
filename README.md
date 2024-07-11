@@ -1,13 +1,11 @@
 # ASR_TTS_Tool_UE5
 
-This is UE4 wrapper for Google's [Cloud Text-to-Speech](https://cloud.google.com/text-to-speech/) and syncronous [Cloud Speech-to-Text](https://cloud.google.com/speech-to-text/) speech recognition.
+Capture microphone audio for ASR,play audio stream from TTS.
+By using this plugin, real-time microphone audio data can be obtained, which can be sent to the ASR server for speech recognition, and the audio stream obtained from the TTS service can be played in real-time.
 
-Plugin was battle tested in several commercial simulator projects. It is small, lean and simple to use.
+# How to use
 
-
-# Engine preparation
-
-To make microphone work, you need to add following lines to `DefaultEngine.ini` of the project.
+First, you need to add following lines to `DefaultEngine.ini` of the project.
 ```
 [Voice]
 bEnabled = True

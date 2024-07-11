@@ -22,33 +22,45 @@ voice.SilenceDetectionThreshold = -1
 voice.MicNoiseGateThreshold = -1
 ```
 
-初始化ASR Tool
+Initialize the voice capture object
+
+SampleRate: sampling rate of voice capture
+
+NumChannels: number of channels to capture
+
+MicDeviceName: name of device to capture audio data with, empty for default device
 
 ![](UE5/ASR1.png)
 
-开始捕获麦克风音频
+Start capturing voice And store the audio data in Buffer
 
 ![](UE5/ASR2.png)
 
-捕获麦克风音频后，应该每0.1秒调用一次，获取有效的麦克风捕获音频数据，从而发送到ASR 服务器
+After capturing Voice, it should be called every 0.1 seconds to obtain valid audio data and send it to the ASR server,The frequency is modified according to the requirements of ASR services.
 
 ![](UE5/ASR3.png)
 
-停止捕获麦克风音频
+Stop capturing voice
 
 ![](UE5/ASR4.png)
 
 
 # TTS Tool
 
-初始化TTS Tool
+Create AudioComponent and ProceduralWave
+
+SampleRate: sampling rate of procedural soundwaves
+
+NumChannels: number of channels for procedural soundwaves
 
 ![](UE5/TTS1.png)
 
-设置是否自动播放音频，和是否重置音频数据
+PlayOrStop: If Play,auto play audio when queue audio stream.
+
+ResetAduio: If ResetAudio,Remove all queued data.
 
 ![](UE5/TTS2.png)
 
-储存音频数据
+Queue Audio Data From TTS Server
 
 ![](UE5/TTS3.png)
